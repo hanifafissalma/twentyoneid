@@ -274,82 +274,112 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="image-show-991">
-                        <div className="m-t-50 shipper-logo-display">
+                        <div className="m-t-30 shipper-logo-display">
                         <img
-                            src="/static/img/shipper-logo/jdid.png"
-                            className="shipper-logo animatable fadeInUp delay-1"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/grab.png"
-                            className="shipper-logo animatable fadeInUp delay-1"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/unilever.png"
-                            className="shipper-logo shipper-logo-portrait animatable fadeInUp delay-1"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/haier.png"
-                            className="shipper-logo animatable fadeInUp delay-2"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/png.png"
-                            className="shipper-logo shipper-logo-portrait animatable fadeInUp delay-2"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/kino.png"
-                            className="shipper-logo animatable fadeInUp delay-2"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/ot.png"
-                            className="shipper-logo animatable fadeInUp delay-3"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/sm.png"
-                            className="shipper-logo animatable fadeInUp delay-3"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/modena.png"
-                            className="shipper-logo animatable fadeInUp delay-3"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/hero.png"
-                            className="shipper-logo animatable fadeInUp delay-4"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/jx.png"
-                            className="shipper-logo shipper-logo-portrait animatable fadeInUp delay-4"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/dhl.png"
-                            className="shipper-logo animatable fadeInUp delay-4"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/tanihub.png"
-                            className="shipper-logo shipper-logo-portrait animatable fadeInUp delay-5"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/marriot.png"
-                            className="shipper-logo animatable fadeInUp delay-5"
-                            alt="shipper-logo"
-                        />
-                        <img
-                            src="/static/img/shipper-logo/abc.png"
-                            className="shipper-logo animatable fadeInUp delay-5"
-                            alt="shipper-logo"
-                        />
+                                src="./images/client/logo_toyota.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_mitsubishi.png"
+                                className="shipper-logo-portrait"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_gmt.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_soraya.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_stabilo.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_valbury.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_lg.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_sinarmeadow.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_qatar.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_kominfo.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_kdk.png"
+                                className="shipper-logo-portrait"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_pgn.png"
+                                className="shipper-logo-portrait"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_ckm.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_bsm.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_jakon.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_altrak.png"
+                                className="shipper-logo-portrait"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_agit.png"
+                                className="shipper-logo-portrait"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_dcrepes.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_ahm.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_elcy.png"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
+                            <img
+                                src="./images/client/logo_mybrand.jpeg"
+                                className="shipper-logo"
+                                alt="logo"
+                            />
                         </div>
                     </div>
                 </div>

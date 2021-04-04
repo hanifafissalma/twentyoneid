@@ -209,6 +209,9 @@ $black_text: #01193c;
     transition: all 0.5s;
     z-index: 997;
     background: white;
+    @include breakpoint(md){
+      height:50px;
+    }
   }
 
   #header #logo h1 {
@@ -318,7 +321,7 @@ $black_text: #01193c;
   }
 
   .mobile-nav-toggle {
-    color: #fff;
+    color: $old_grey;
     font-size: 28px;
     cursor: pointer;
     display: none;
@@ -485,6 +488,7 @@ $black_text: #01193c;
     text-align: center;
     padding-bottom: 40px;
     color: $young_grey;
+    font-size:22px;
   }
 
   .breadcrumbs {
@@ -539,7 +543,7 @@ $black_text: #01193c;
   }
 
   #about {
-    background: $grey_background;
+    background: white;
     padding: 80px 0;
   }
 
@@ -2221,6 +2225,10 @@ h1{
   font-family: 'prox-extra-bold';
   font-size: 50px;
   line-height: 65px;
+  @include breakpoint(md){
+    font-size:40px;
+    line-height:45px;
+  }
 }
 
 h2{
@@ -2258,10 +2266,14 @@ h2{
   font-size: 20px;
   line-height: 28px;
   font-family: 'prox-light';
+  @include breakpoint(md){
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 .footer{
-  background-color: $old_grey;
-  color:white;
+  background-color: $grey_background;
+  color:$black_text;
 }
 .big-hp {
   display: block !important;
@@ -2284,24 +2296,10 @@ h2{
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 150px;
-    @include breakpoint(hi-res) {
-      padding: 250px;
-    }
-    @include breakpoint(max-1024) {
-      padding: 150px 75px;
-    }
+    padding: 100px;
     @include breakpoint(md) {
-      padding: 100px 70px;
-    }
-    @include breakpoint(sm) {
-      padding: 100px 50px;
-    }
-    @include breakpoint(xs) {
-      padding: 100px 25px 75px;
-    }
-    @include breakpoint(height-400) {
-      padding: 75px 50px 50px;
+      padding: 40px;
+      background-position: left;
     }
   }
 }
@@ -2356,5 +2354,12 @@ h2{
     @include breakpoint(xs) {
       width: 75px;
     }
+  }
+}
+.logo{
+  width:80px;
+  margin:10px;
+  @include breakpoint(md){
+    width:40px;
   }
 }

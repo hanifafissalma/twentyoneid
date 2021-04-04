@@ -5,9 +5,9 @@ import '../static/scss/_core.scss';
 const Nav = () => { 
     return(
         <header id="header" className="fixed-top">
-            <div className="container d-flex align-items-center justify-content-between">
+            <div className="container d-flex align-items-center justify-content-between m-t-10">
                 <div id="logo">
-                    <Link to="/"><img src={"./images/logo.png"} alt="" style={{maxWidth:'80px', margin:'10px'}}/></Link>
+                    <Link to="/"><img src={"./images/logo.png"} alt="" className="logo"/></Link>
                 </div>
                 <nav id="navbar" className="navbar">
                     <ul>

@@ -2,6 +2,8 @@ $young_grey: #a79e9d;
 $old_grey: #353535;
 $orange: #ffb91b;
 $orange_hover: #f1a102;
+$grey_background: #f4f7fa;
+$black_text: #01193c;
 
 @mixin breakpoint($class) {
     @if $class==xs {
@@ -203,7 +205,7 @@ $orange_hover: #f1a102;
   }
 
   #header {
-    height: 90px;
+    height: 100px;
     transition: all 0.5s;
     z-index: 997;
     background: white;
@@ -228,8 +230,8 @@ $orange_hover: #f1a102;
     margin: 0;
   }
 
-  #header.header-transparent {
-    background: transparent;
+  #header.header-white {
+    background: white;
   }
 
   #header.header-scrolled {
@@ -393,12 +395,6 @@ $orange_hover: #f1a102;
     position: relative;
   }
 
-  @media (min-width: 1024px) {
-    #hero {
-      background-attachment: fixed;
-    }
-  }
-
   #hero:before {
     content: "";
     background: white;
@@ -543,7 +539,7 @@ $orange_hover: #f1a102;
   }
 
   #about {
-    background: #fff;
+    background: $grey_background;
     padding: 80px 0;
   }
 
@@ -649,9 +645,17 @@ $orange_hover: #f1a102;
     margin-bottom: 50px;
     text-align: center;
     border: 1px solid #e6e6e6;
-    height: 200px;
+    height: 270px;
     position: relative;
-    background: #fafafa;
+    background: white;
+    border-radius:25px;
+  }
+
+  #services .box:hover {
+    border: 1px solid $orange;
+    box-shadow: -5px 12px 35px -5px rgba(237,171,45,0.75);
+    -webkit-box-shadow: -5px 12px 35px -5px rgba(237,171,45,0.75);
+    -moz-box-shadow: -5px 12px 35px -5px rgba(237,171,45,0.75);
   }
 
   #services .icon {
@@ -1126,3 +1130,1231 @@ $orange_hover: #f1a102;
     font-size: 13px;
     color: $young_grey;
   }
+/*animasi*/
+.animatable {
+  visibility: hidden;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    -o-transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0.3);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+  }
+
+  70% {
+    -webkit-transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes bounceIn {
+  0% {
+    opacity: 1;
+    -moz-transform: scale(0.3);
+  }
+
+  50% {
+    -moz-transform: scale(1.05);
+  }
+
+  70% {
+    -moz-transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+  }
+}
+
+@-o-keyframes bounceIn {
+  0% {
+    opacity: 1;
+    -o-transform: scale(0.3);
+  }
+
+  50% {
+    -o-transform: scale(1.05);
+  }
+
+  70% {
+    -o-transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 1;
+    transform: scale(0.3);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animated {
+  visibility: visible;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+  &.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    -moz-animation-name: fadeInUp;
+    -o-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+  &.bounceIn {
+    -webkit-animation-name: bounceIn;
+    -moz-animation-name: bounceIn;
+    -o-animation-name: bounceIn;
+    animation-name: bounceIn;
+  }
+}
+.delay {
+  &-1 {
+    animation-delay: 0.25s;
+  }
+  &-2 {
+    animation-delay: 0.5s;
+  }
+  &-3 {
+    animation-delay: 0.75s;
+  }
+  &-4 {
+    animation-delay: 1s;
+  }
+  &-5 {
+    animation-delay: 1.25s;
+  }
+}
+
+.m {
+  &-t {
+    &-5 {
+      margin-top: 5px;
+    }
+    &-10 {
+      margin-top: 10px;
+    }
+    &-20 {
+      margin-top: 20px;
+    }
+    &-30 {
+      margin-top: 30px;
+    }
+    &-50 {
+      margin-top: 50px;
+    }
+    &-200 {
+      margin-top: 200px;
+      @include breakpoint(xs) {
+        margin-top: 100px;
+      }
+    }
+  }
+  &-b {
+    &-0 {
+      margin-bottom: 0;
+    }
+    &-10 {
+      margin-bottom: 10px;
+    }
+    &-20 {
+      margin-bottom: 20px;
+    }
+    &-25 {
+      margin-bottom: 25px;
+    }
+    &-30 {
+      margin-bottom: 30px;
+    }
+    &-50 {
+      margin-bottom: 50px;
+    }
+  }
+  &-r {
+    &-5 {
+      margin-right: 5px;
+    }
+    &-10 {
+      margin-right: 10px;
+    }
+    &-20 {
+      margin-right: 20px;
+    }
+    &-30 {
+      margin-right: 30px;
+    }
+    &-50 {
+      margin-right: 50px;
+    }
+  }
+  &-l {
+    &-10 {
+      margin-left: 10px;
+    }
+    &-20 {
+      margin-left: 20px;
+    }
+    &-25 {
+      margin-left: 25px;
+    }
+    &-30 {
+      margin-left: 30px;
+    }
+    &-40 {
+      margin-left: 40px;
+    }
+    &-50 {
+      margin-left: 50px;
+    }
+  }
+}
+//font-size
+.font {
+  &-18 {
+    font-size: 18px;
+    @include breakpoint(hi-res) {
+      font-size: 36px;
+    }
+  }
+  &-14 {
+    font-size: 14px;
+    @include breakpoint(hi-res) {
+      font-size: 28px;
+    }
+  }
+  &-12 {
+    font-size: 12px;
+    @include breakpoint(hi-res) {
+      font-size: 24px;
+    }
+  }
+}
+
+.section {
+  &-even {
+    padding: 150px;
+    @include breakpoint(hi-res) {
+      padding: 250px;
+    }
+    @include breakpoint(max-1200) {
+      padding: 150px 100px;
+    }
+    @include breakpoint(max-1024) {
+      padding: 100px 75px;
+    }
+    @include breakpoint(xs) {
+      padding: 50px 25px;
+    }
+  }
+  &-odd {
+    background-color: $grey_background;
+    padding: 150px;
+    @include breakpoint(hi-res) {
+      padding: 250px;
+    }
+    @include breakpoint(max-1200) {
+      padding: 150px 100px;
+    }
+    @include breakpoint(max-1024) {
+      padding: 100px 75px;
+    }
+    @include breakpoint(xs) {
+      padding: 50px 25px;
+    }
+  }
+  &-driver {
+    padding: 150px 0;
+    @include breakpoint(hi-res) {
+      padding: 250px 0;
+    }
+    @include breakpoint(sm) {
+      padding: 75px 0;
+    }
+  }
+  &-search {
+    padding: 30px 0;
+    @include breakpoint(hi-res) {
+      padding: 150px 0;
+    }
+    @include breakpoint(md) {
+      padding: 40px 0;
+    }
+  }
+  &-culture {
+    @include breakpoint(xs) {
+      padding: 50px 0;
+    }
+  }
+  &-coco {
+    padding: 75px 0 0;
+    @include breakpoint(hi-res) {
+      padding: 150px 0 0;
+    }
+    @include breakpoint(sm) {
+      padding: 50px 0 0;
+    }
+    &-value {
+      padding: 20px 125px 50px;
+      @include breakpoint(max-1024) {
+        padding: 25px 50px 50px;
+      }
+      @include breakpoint(md) {
+        padding: 25px 50px;
+      }
+      @include breakpoint(sm) {
+        padding: 25px 20px;
+      }
+      @include breakpoint(xs) {
+        padding: 0 25px 50px;
+      }
+    }
+  }
+  &-liput {
+    padding: 250px 150px 150px;
+    @include breakpoint(hi-res) {
+      padding: 500px 300px 300px;
+    }
+    @include breakpoint(lg) {
+      padding: 275px 150px 150px;
+    }
+    @include breakpoint(max-1200) {
+      padding: 250px 100px 150px;
+    }
+    @include breakpoint(md) {
+      padding: 135px 100px 100px;
+    }
+    @include breakpoint(sm-landscape) {
+      padding: 150px 75px;
+    }
+    @include breakpoint(xs) {
+      padding: 120px 25px 25px;
+    }
+    @include breakpoint(xs-landscape) {
+      padding: 130px 25px 25px;
+    }
+  }
+}
+
+.title-section {
+  color: $old_grey;
+  font-size: 18px;
+  font-family: 'prox-bold';
+  @include breakpoint(xs) {
+    font-size: 13px;
+  }
+  @include breakpoint(hi-res) {
+    font-size: 36px;
+  }
+}
+.intro-text {
+  color: $black_text;
+  font-size: 42px;
+  line-height: 55px;
+  font-family: 'prox-extra-bold';
+  &-50 {
+    font-size: 47px;
+    line-height: 65px;
+    font-weight: 600;
+    font-family: 'prox-bold';
+    color: $black_text;
+    @include breakpoint(hi-res) {
+      font-size: 90px;
+      line-height: 110px;
+    }
+    @include breakpoint(max-1200) {
+      font-size: 45px;
+      line-height: 52px;
+    }
+    @include breakpoint(md) {
+      font-size: 30px;
+      line-height: 45px;
+    }
+    @include breakpoint(sm) {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+  @include breakpoint(max-1280) {
+    font-size: 35px;
+    line-height: 47px;
+  }
+  @include breakpoint(max-1200) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  @include breakpoint(xs) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  @include breakpoint(hi-res) {
+    font-size: 85px;
+    line-height: 110px;
+  }
+}
+
+.head-title {
+  font-family: 'prox-extra-bold';
+  font-size: 50px;
+  line-height: 65px;
+  &-white {
+    color: white;
+    font-family: 'prox-bold';
+    font-size: 50px;
+    line-height: 65px;
+    @include breakpoint(md) {
+      font-size: 38px;
+      line-height: 48px;
+    }
+    @include breakpoint(xs) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @include breakpoint(max-320) {
+      font-size: 24px;
+      line-height: 35px;
+    }
+    @include breakpoint(hi-res) {
+      font-size: 100px;
+      line-height: 120px;
+    }
+  }
+  @include breakpoint(md) {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  @include breakpoint(xs) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @include breakpoint(max-320) {
+    font-size: 24px;
+    line-height: 35px;
+  }
+  @include breakpoint(hi-res) {
+    font-size: 100px;
+    line-height: 120px;
+  }
+}
+.head-register {
+  font-family: 'prox-extra-bold';
+  font-size: 34px;
+  line-height: 40px;
+  color: $black_text;
+  @include breakpoint(hi-res) {
+    font-size: 46px;
+    line-height: 56px;
+  }
+  @include breakpoint(max-1280) {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  @include breakpoint(sm) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  @include breakpoint(xs) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  @include breakpoint(max-400) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.opportunity-text {
+  font-family: 'prox-light';
+  font-size: 35px;
+  line-height: 55px;
+  color: white;
+  @include breakpoint(hi-res) {
+    font-size: 70px;
+    line-height: 100px;
+  }
+  @include breakpoint(max-1200) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  @include breakpoint(sm) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  @include breakpoint(xs) {
+    text-align: left;
+  }
+  &-career {
+    font-family: 'prox-bold';
+    font-size: 35px;
+    line-height: 55px;
+    color: white;
+    @include breakpoint(hi-res) {
+      font-size: 65px;
+      line-height: 90px;
+    }
+    @include breakpoint(max-1200) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @include breakpoint(sm) {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    @include breakpoint(xs) {
+      text-align: center;
+    }
+    @include breakpoint(height-400) {
+      font-size: 22px;
+      line-height: 34px;
+    }
+  }
+}
+.about-content {
+  color: white;
+  font-size: 24px;
+  font-family: 'prox';
+  line-height: 34px;
+  letter-spacing: 0.24px;
+  @include breakpoint(hi-res) {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  @include breakpoint(max-1024) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  @include breakpoint(sm) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  @include breakpoint(height-400) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  @include breakpoint(max-320) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.pelajari-lebih-lanjut {
+  color: $orange;
+  font-weight: bold;
+  font-family: 'prox';
+  letter-spacing: 0.8px;
+  font-size: 20px;
+  @include breakpoint(hi-res) {
+    font-size: 40px;
+  }
+}
+.cara-kerja {
+  &-number {
+    font-size: 24px;
+    font-family: 'prox';
+    color: $orange;
+    margin-right: 10px;
+    @include breakpoint(hi-res) {
+      font-size: 48px;
+    }
+    @include breakpoint(xs) {
+      font-size: 20px;
+    }
+  }
+  &-head {
+    font-size: 21px;
+    line-height: 30px;
+    font-family: 'prox';
+    font-weight: 600;
+    color: $black_text;
+    @include breakpoint(hi-res) {
+      font-size: 42px;
+      line-height: 60px;
+    }
+    @include breakpoint(xs) {
+      font-size: 18px;
+    }
+  }
+  &-content {
+    font-size: 16px;
+    line-height: 24px;
+    color: $young_grey;
+    font-family: 'prox-light';
+    @include breakpoint(hi-res) {
+      font-size: 32px;
+      line-height: 45px;
+    }
+    @include breakpoint(xs) {
+      font-size: 14px;
+    }
+  }
+  &-content-black {
+    font-size: 16px;
+    line-height: 24px;
+    color: $old_grey;
+    @include breakpoint(hi-res) {
+      font-size: 32px;
+      line-height: 45px;
+    }
+  }
+}
+.text {
+  &-support {
+    color: white;
+    font-size: 21px;
+    line-height: 32px;
+    font-family: 'prox';
+    @include breakpoint(hi-res) {
+      font-size: 42px;
+      line-height: 64px;
+    }
+  }
+  &-justify {
+    text-align: justify;
+  }
+  &-explain {
+    @include breakpoint(min-1500) {
+      width: 70%;
+    }
+    @include breakpoint(max-1200) {
+      width: 85%;
+    }
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+  &-awesome-moment {
+    @include breakpoint(min-1500) {
+      margin-bottom: 80px;
+    }
+  }
+}
+.testimoni-text {
+  color: $young_grey;
+  font-size: 24px;
+  line-height: 35px;
+  @include breakpoint(hi-res) {
+    font-size: 48px;
+    line-height: 70px;
+  }
+  @include breakpoint(md) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &-name {
+    color: $old_grey;
+    font-size: 21px;
+    line-height: 24px;
+    font-family: 'prox-bold';
+    @include breakpoint(hi-res) {
+      font-size: 42px;
+      line-height: 48px;
+    }
+  }
+  &-role {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'prox-light';
+    @include breakpoint(hi-res) {
+      font-size: 36px;
+      line-height: 48px;
+    }
+    @include breakpoint(xs) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  &-white {
+    color: white;
+    font-size: 24px;
+    line-height: 35px;
+    font-family: 'prox-light';
+    @include breakpoint(hi-res) {
+      font-size: 48px;
+      line-height: 70px;
+    }
+    @include breakpoint(md) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include breakpoint(xs) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &-apply {
+    color: white;
+    font-size: 24px;
+    line-height: 35px;
+    font-family: 'prox-light';
+    @include breakpoint(hi-res) {
+      font-size: 48px;
+      line-height: 70px;
+    }
+    @include breakpoint(md) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  &-black {
+    color: $young_grey;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: bold;
+    @include breakpoint(hi-res) {
+      font-size: 48px;
+      line-height: 70px;
+    }
+  }
+}
+.disrupt-text {
+  font-size: 36px;
+  line-height: 36px;
+  color: white;
+  font-family: 'prox-bold';
+  @include breakpoint(hi-res) {
+    font-size: 72px;
+    line-height: 72px;
+  }
+  @include breakpoint(md) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  @include breakpoint(xs) {
+    margin-top: 10px;
+  }
+  @include breakpoint(max-400) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.karir {
+  &-head-text {
+    color: white;
+    font-size: 80px;
+    line-height: 85px;
+    font-family: 'prox-extra-bold';
+    @include breakpoint(hi-res) {
+      font-size: 160px;
+      line-height: 170px;
+    }
+    @include breakpoint(md) {
+      font-size: 70px;
+      line-height: 75px;
+    }
+    @include breakpoint(sm) {
+      font-size: 55px;
+      line-height: 60px;
+    }
+    @include breakpoint(xs) {
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+  &-head-text-black {
+    color: $old_grey;
+    font-size: 80px;
+    line-height: 98px;
+    font-family: 'prox-bold';
+    @include breakpoint(hi-res) {
+      font-size: 160px;
+      line-height: 192px;
+    }
+    @include breakpoint(md) {
+      font-size: 70px;
+      line-height: 75px;
+    }
+    @include breakpoint(xs) {
+      font-size: 50px;
+      line-height: 55px;
+    }
+  }
+  &-sub-values {
+    color: $old_grey;
+    font-family: 'prox-bold';
+    font-size: 60px;
+    line-height: 75px;
+    @include breakpoint(hi-res) {
+      font-size: 120px;
+      line-height: 150px;
+    }
+    @include breakpoint(md) {
+      font-size: 43px;
+      line-height: 53px;
+    }
+    @include breakpoint(sm) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+    @include breakpoint(xs) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+}
+.font-bold {
+  font-weight: 600;
+}
+.search-form {
+  height: 60px;
+  background-color: #f9f9f9;
+  border: none;
+  @include breakpoint(hi-res) {
+    font-size: 40px;
+  }
+}
+.fa-facebook,
+.fa-instagram,
+.fa-linkedin-in {
+  font-size: 18px;
+  @include breakpoint(hi-res) {
+    font-size: 36px;
+  }
+  @include breakpoint(sm) {
+    font-size: 28px;
+  }
+}
+.login-text {
+  &-head {
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'prox-extra-bold';
+    color: $old_grey;
+    @include breakpoint(hi-res) {
+      font-size: 48px;
+      line-height: 72px;
+    }
+  }
+  &-subhead {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'prox-black';
+    color: $old_grey;
+    @include breakpoint(hi-res) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+  &-content {
+    font-size: 14px;
+    color: $young_grey;
+    line-height: 17px;
+    font-family: 'prox';
+    @include breakpoint(hi-res) {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+  &-nav {
+    font-size: 16px;
+    line-height: 50px;
+    color: $black_text;
+    @include breakpoint(hi-res) {
+      font-size: 32px;
+      line-height: 100px;
+    }
+    @include breakpoint(max-320) {
+      font-size: 14px;
+    }
+  }
+}
+a {
+  &.text-logisly {
+    color: $orange;
+    cursor: pointer;
+    letter-spacing: 0.3;
+  }
+}
+.sukses-text {
+  &-title {
+    font-size: 28px;
+    line-height: 35px;
+    font-family: 'prox-bold';
+    margin: 10px 0;
+    @include breakpoint(hi-res) {
+      font-size: 56px;
+      line-height: 70px;
+      margin: 20px 0;
+    }
+    @include breakpoint(md) {
+      margin: 10px 0 0;
+    }
+    @include breakpoint(sm-landscape) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+  &-sub-title {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.14px;
+    margin: 10px 0;
+    @include breakpoint(hi-res) {
+      font-size: 28px;
+      line-height: 42px;
+      margin: 20px 0;
+    }
+    @include breakpoint(sm-landscape) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+.head-about {
+  margin-top: 90px;
+  @include breakpoint(lg) {
+    margin-top: 75px;
+  }
+  @include breakpoint(max-1024) {
+    margin-top: 50px;
+  }
+  @include breakpoint(md) {
+    margin-top: 20px;
+  }
+  @include breakpoint(xs) {
+    margin-top: 0;
+  }
+}
+.text-error,
+.validationError {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.6px;
+  color: $orange;
+  margin-left: 5px;
+  margin-top: 5px;
+  @include breakpoint(hi-res) {
+    font-size: 24px;
+    line-height: 28px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.order-truk {
+  @include breakpoint(xs) {
+    margin-left: 15px;
+  }
+  &-text {
+    @include breakpoint(xs) {
+      margin-left: 25px;
+    }
+  }
+}
+.caption {
+  @include breakpoint(xs) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.text {
+  &-danger {
+    color: $orange;
+    font-weight: bold;
+  }
+  &-success {
+    color: $orange;
+    font-weight: bold;
+  }
+  &-join {
+    @include breakpoint(sm) {
+      text-align: left;
+    }
+    @include breakpoint(xs) {
+      text-align: center;
+    }
+  }
+  &-mute {
+    color: #b4b4b4;
+  }
+  &-capital {
+    text-transform: uppercase;
+  }
+  &-free-join {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    @include breakpoint(hi-res) {
+      margin-top: 200px;
+      margin-bottom: 160px;
+    }
+    @include breakpoint(sm) {
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+  }
+  &-transporter {
+    width: 80%;
+    @include breakpoint(xs) {
+      width: 90%;
+    }
+    @include breakpoint(sm-landscape) {
+      width: 60%;
+    }
+  }
+  &-job {
+    margin-top: 50px;
+    margin-left: 10px;
+    @include breakpoint(sm) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+}
+.footer-text {
+  font-size: 12px;
+  &-login {
+    font-family: 'prox-light';
+    font-size: 12px;
+    @include breakpoint(hi-res) {
+      font-size: 24px;
+    }
+  }
+  @include breakpoint(hi-res) {
+    font-size: 24px;
+  }
+  @include breakpoint(md) {
+    margin-top: 0;
+  }
+  @include breakpoint(sm) {
+    margin-top: -30px;
+  }
+}
+.all-roles {
+  padding-top: 80px;
+  @include breakpoint(hi-res) {
+    padding-top: 160px;
+  }
+  @include breakpoint(sm-landscape) {
+    padding-top: 30px;
+  }
+  @include breakpoint(xs) {
+    padding-top: 20px;
+  }
+}
+.content-truk-order {
+  @include breakpoint(xs) {
+    margin-left: -30px;
+  }
+  @include breakpoint(max-320) {
+    margin-left: -20px;
+  }
+}
+
+h1{
+  font-family: 'prox-extra-bold';
+  font-size: 50px;
+  line-height: 65px;
+}
+
+h2{
+  font-family: 'prox-extra-bold';
+  font-size: 40px;
+  line-height: 55px;
+}
+
+.text{
+  &-dark{
+    color:$black_text;
+  }
+  &-orange{
+    color:$orange;
+  }
+  &-muted{
+    color:$young_grey;
+  }
+}
+
+.btn{
+  &-primary{
+    background:$orange;
+    color:white;
+    border-radius:25px;
+    border: 1px solid $orange;
+    padding: 10px 30px;
+  }
+  &-primary:hover{
+    background:$orange_hover;
+    border: 1px solid $orange_hover;
+  }
+}
+.intro-text {
+  font-size: 20px;
+  line-height: 28px;
+  font-family: 'prox-light';
+}
+.footer{
+  background-color: $old_grey;
+  color:white;
+}
+.big-hp {
+  display: block !important;
+  @include breakpoint(sm) {
+    display: none !important;
+  }
+}
+.small-hp {
+  display: none !important;
+  @include breakpoint(sm) {
+    display: block !important;
+  }
+}
+.background {
+  &-index {
+    background: url('../background.png');
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 150px;
+    @include breakpoint(hi-res) {
+      padding: 250px;
+    }
+    @include breakpoint(max-1024) {
+      padding: 150px 75px;
+    }
+    @include breakpoint(md) {
+      padding: 100px 70px;
+    }
+    @include breakpoint(sm) {
+      padding: 100px 50px;
+    }
+    @include breakpoint(xs) {
+      padding: 100px 25px 75px;
+    }
+    @include breakpoint(height-400) {
+      padding: 75px 50px 50px;
+    }
+  }
+}
+.image-show {
+  &-991 {
+    display: none;
+    @include breakpoint(md) {
+      display: block;
+    }
+  }
+  &-desktop {
+    display: block;
+    @include breakpoint(hi-res) {
+      display: none;
+    }
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+}
+
+.shipper {
+  &-logo-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  &-logo-portrait{
+    width: 90px;
+    margin: 10px 20px;
+    @include breakpoint(hi-res) {
+      width: 200px;
+    }
+    @include breakpoint(max-1280) {
+      margin: 10px;
+    }
+    @include breakpoint(xs) {
+      width: 75px;
+    }
+  }
+  &-logo {
+    width: 140px;
+    margin: 10px 20px;
+    @include breakpoint(hi-res) {
+      width: 250px;
+    }
+    @include breakpoint(max-1280) {
+      margin: 10px;
+    }
+    @include breakpoint(xs) {
+      width: 75px;
+    }
+  }
+}

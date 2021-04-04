@@ -1,8 +1,11 @@
 import React from 'react';
+import Nav from './components/Nav';
 
 const Project = () => {
     return(
-        'prohject'
+        <div>
+            <Nav/>
+        </div>
     )
 }
 export default Project;

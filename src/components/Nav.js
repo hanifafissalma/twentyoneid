@@ -1,23 +1,22 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {NavLink,Link } from "react-router-dom";
 import '../static/scss/_core.scss';
 
 const Nav = () => { 
     return(
-        <header id="header" className="fixed-top d-flex align-items-center header-transparent">
-            <div className="container d-flex justify-content-between align-items-center">
-            <div id="logo">
-                <Link to="/"><img src={"../../public/images/logo.png"} alt=""/></Link>
-            </div>
-            <nav id="navbar" className="navbar">
-                <ul>
-                    <li><Link to="/about" className="nav-link scrollto">About</Link></li>
-                    <li><Link to="/service" className="nav-link scrollto">Service</Link></li>
-                    <li><Link to="/project" className="nav-link scrollto">Project</Link></li>
-                    <li><Link to="/client" className="nav-link scrollto">Client</Link></li>
-                </ul>
-                <i className="bi bi-list mobile-nav-toggle"></i>
-            </nav>
+        <header id="header" className="fixed-top">
+            <div className="container d-flex align-items-center justify-content-between">
+                <div id="logo">
+                    <Link to="/"><img src={"./images/logo.png"} alt="" style={{maxWidth:'80px', margin:'10px'}}/></Link>
+                </div>
+                <nav id="navbar" className="navbar">
+                    <ul>
+                        <li><NavLink  to="/service" className="nav-link scrollto" activeClassName="nav-link scrollto active">Service</NavLink ></li>
+                        <li><NavLink  to="/project" className="nav-link scrollto" activeClassName="nav-link scrollto active">Project</NavLink ></li>
+                        <li><NavLink  to="/client" className="nav-link scrollto" activeClassName="nav-link scrollto active">Client</NavLink ></li>
+                    </ul>
+                    <i className="bi bi-list mobile-nav-toggle"></i>
+                </nav>
             </div>
         </header>
     )

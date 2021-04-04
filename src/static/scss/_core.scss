@@ -1,5 +1,5 @@
 $young_grey: #a79e9d;
-$old_grey: #353535;
+$old_grey: #58585a;
 $orange: #ffb91b;
 $orange_hover: #f1a102;
 $grey_background: #f4f7fa;
@@ -2239,7 +2239,7 @@ h2{
 
 .text{
   &-dark{
-    color:$black_text;
+    color:$old_grey;
   }
   &-orange{
     color:$orange;

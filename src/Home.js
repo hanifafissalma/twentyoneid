@@ -155,11 +155,11 @@ const Home = () => {
             <section className="section-even" id="about">
                 <div className="container">
                     <div className="section-header">
-                        <h2 className="section-title">Our Client & Partners</h2>
-                        <p className="section-description">Media Placement</p>
+                        <h2 className="section-title animatable fadeInUp">Our Client & Partners</h2>
+                        <p className="section-description animatable fadeInUp delay-1">Media Placement</p>
                     </div>
                     <div className="image-show-desktop">
-                        <div className="m-t-30 shipper-logo-display">
+                        <div className="m-t-30 shipper-logo-display animatable fadeInUp delay-2">
                             <img
                                 src="./images/client/logo_toyota.png"
                                 className="shipper-logo"
@@ -191,7 +191,7 @@ const Home = () => {
                                 alt="logo"
                             />
                         </div>
-                        <div className="m-t-30 shipper-logo-display">
+                        <div className="m-t-30 shipper-logo-display animatable fadeInUp delay-2">
                             <img
                                 src="./images/client/logo_lg.png"
                                 className="shipper-logo"
@@ -223,7 +223,7 @@ const Home = () => {
                                 alt="logo"
                             />
                         </div>
-                        <div className="m-t-30 shipper-logo-display">
+                        <div className="m-t-30 shipper-logo-display animatable fadeInUp delay-3">
                             <img
                                 src="./images/client/logo_ckm.png"
                                 className="shipper-logo"
@@ -255,7 +255,7 @@ const Home = () => {
                                 alt="logo"
                             />
                         </div>
-                        <div className="m-t-30 shipper-logo-display">
+                        <div className="m-t-30 shipper-logo-display animatable fadeInUp delay-3">
                             <img
                                 src="./images/client/logo_ahm.png"
                                 className="shipper-logo"
@@ -274,8 +274,8 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="image-show-991">
-                        <div className="m-t-30 shipper-logo-display">
-                        <img
+                        <div className="m-t-30 shipper-logo-display animatable fadeInUp delay-2">
+                            <img
                                 src="./images/client/logo_toyota.png"
                                 className="shipper-logo"
                                 alt="logo"

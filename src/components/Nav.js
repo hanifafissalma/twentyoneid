@@ -13,7 +13,10 @@ const Nav = () => {
                     <ul>
                         <li><NavLink  to="/service" className="nav-link scrollto" activeClassName="nav-link scrollto active">Service</NavLink ></li>
                         <li><NavLink  to="/project" className="nav-link scrollto" activeClassName="nav-link scrollto active">Project</NavLink ></li>
-                        <li><NavLink  to="/client" className="nav-link scrollto" activeClassName="nav-link scrollto active">Client</NavLink ></li>
+                        {/* <li><NavLink  to="/client" className="nav-link scrollto" activeClassName="nav-link scrollto active">Client</NavLink ></li> */}
+                        <li>
+                            <button className="btn btn-primary btn-md btn-wide">HIRE US</button>
+                        </li>
                     </ul>
                     <i className="bi bi-list mobile-nav-toggle"></i>
                 </nav>
